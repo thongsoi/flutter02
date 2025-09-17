@@ -1,0 +1,18 @@
+task-management-app/
+├── backend/
+│   ├── main.go
+│   ├── go.mod
+│   ├── go.sum (generated after go mod tidy)
+│   ├── .env
+│   ├── .gitignore
+│   └── README.md
+│
+└── frontend/
+    ├── android/
+    ├── ios/
+    ├── lib/
+    │   └── main.dart
+    ├── pubspec.yaml
+    ├── pubspec.lock (generated after flutter pub get)
+    ├── .gitignore
+    └── README.md
