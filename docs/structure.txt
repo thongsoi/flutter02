@@ -17,9 +17,24 @@ task-management-app (flutter02 on biomassx2/claude.ai)
     ├── .gitignore
     └── README.md
 
-
+How to setup backend
+like normal go project
 
 How to setup frontend
 $ cd frontend
 $ flutter create .
-# Replace pubspec.yaml and lib/main.dart with provided code
+# Replace pubspec.yaml and lib/main.dart with provided codes by claude
+
+How to run
+use multiple terminals
+Terminal 1
+$ cd backend 
+$ go run main.go
+
+Terminal 2
+$ cd frontend
+$ flutter run
+
+How to stop
+Terminal 1 = Ctl C
+Terminal 2 = Close emulator device (web/android/ios)
