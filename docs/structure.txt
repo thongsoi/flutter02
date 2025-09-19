@@ -38,3 +38,12 @@ $ flutter run
 How to stop
 Terminal 1 = Ctl C
 Terminal 2 = Close emulator device (web/android/ios)
+
+
+
+Step:
+run go backend
+start android emulator via android studio
+run flutter slect emulator
+app should connect via http://10.0.2.2:8080/api
+test add/edit/delete tasks
