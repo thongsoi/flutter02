@@ -1,5 +1,0 @@
-# Database Configuration
-DATABASE_URL=postgres://username:password@localhost:5432/flutter?sslmode=disable
-
-# Server Configuration
-PORT=8080
