@@ -1,5 +1,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.INTERNET" /> <!-- If your app needs to access the internet, add this permission. -->
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <!-- If your app needs to check network connectivity, add this permission. -->
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/> <!-- If your app needs to display content on top of other apps, add this permission. -->
+<uses-permission android:name="android.permission.VIBRATE"/> <!-- If your app needs to control the device vibrator, add this permission. -->
+<uses-permission android:name="android.permission.WAKE_LOCK"/> <!-- If your app needs to keep the device awake, add this permission. -->
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/> <!-- If your app uses foreground services, add this permission. -->
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> <!-- If your app needs to access Wi-Fi state, add this permission. -->
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/> <!-- If your app needs to change Wi-Fi state, add this permission. -->
+<uses-permission android:name="android.permission.BLUETOOTH"/> <!-- If your app needs to use Bluetooth, add this permission. -->
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/> <!-- If your app needs to manage Bluetooth, add this permission. -->
+<uses-permission android:name="android.permission.BLUETOOTH_SCAN"/> <!-- If your app needs to scan for Bluetooth devices, add this permission. -->
+<uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE"/> <!-- If your app needs to advertise over Bluetooth, add this permission. -->
+<uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/> <!-- If your app needs to connect to Bluetooth devices, add this permission. -->
+<uses-permission android:name="android.permission.CAMERA"/> <!-- If your app needs to use the camera, add this permission. -->
+<uses-permission android:name="android.permission.RECORD_AUDIO"/> <!-- If your app needs to record audio, add this permission. -->
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> <!-- If your app needs to read from external storage, add this permission. -->
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> <!-- If your app needs to write to external storage, add this permission. -->
+<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/> <!-- If your app needs to manage all files on external storage, add this permission. -->   
     <application
         android:label="frontend"
         android:name="${applicationName}"
