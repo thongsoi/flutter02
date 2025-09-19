@@ -39,11 +39,14 @@ func main() {
 		log.Println("Warning: .env file not found")
 	}
 
-	// Database connection
+	//Database connection
 	dbURL := os.Getenv("DATABASE_URL")
-	if dbURL == "" {
-		dbURL = "postgres://username:password@localhost:5432/taskdb?sslmode=disable"
-	}
+
+	/*
+		if dbURL == "" {
+			dbURL = "postgres://username:password@localhost:5432/taskdb?sslmode=disable"
+		}
+	*/
 
 	pool, err := pgxpool.New(context.Background(), dbURL)
 	if err != nil {
