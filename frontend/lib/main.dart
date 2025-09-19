@@ -1,6 +1,9 @@
+// frontend/lib/main.dart
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'dart:io' show Platform; // ✅ For platform detection
 
 void main() {
   runApp(const MyApp());
@@ -55,7 +58,18 @@ class Task {
 }
 
 class TaskService {
-  static const String baseUrl = 'http://localhost:8080/api';
+  // ✅ Automatically choose correct base URL based on platform
+  static String get baseUrl {
+    if (Platform.isAndroid) {
+      // Use 10.0.2.2 for Android Emulator (points to host machine)
+      return 'http://10.0.2.2:8080/api';
+      // For physical Android device on same WiFi, replace with your machine's local IP:
+      // return 'http://192.168.1.5:8080/api'; // Example — replace with your actual IP
+    } else {
+      // For Web, iOS Simulator, or Desktop
+      return 'http://localhost:8080/api';
+    }
+  }
 
   static Future<List<Task>> getTasks() async {
     try {
@@ -158,7 +172,7 @@ class _TaskScreenState extends State<TaskScreen> {
     try {
       final taskList = await TaskService.getTasks();
       setState(() {
-        tasks = taskList ?? []; // Ensure tasks is never null
+        tasks = taskList ?? [];
         isLoading = false;
       });
     } catch (e) {
@@ -166,7 +180,7 @@ class _TaskScreenState extends State<TaskScreen> {
       setState(() {
         error = e.toString();
         isLoading = false;
-        tasks = []; // Set empty list on error
+        tasks = [];
       });
     }
   }

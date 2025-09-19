@@ -1,3 +1,5 @@
+// backend/main.go
+
 package main
 
 import (
@@ -39,14 +41,11 @@ func main() {
 		log.Println("Warning: .env file not found")
 	}
 
-	//Database connection
+	// Database connection
 	dbURL := os.Getenv("DATABASE_URL")
-
-	/*
-		if dbURL == "" {
-			dbURL = "postgres://username:password@localhost:5432/taskdb?sslmode=disable"
-		}
-	*/
+	if dbURL == "" {
+		dbURL = "postgres://username:password@localhost:5432/taskdb?sslmode=disable"
+	}
 
 	pool, err := pgxpool.New(context.Background(), dbURL)
 	if err != nil {
@@ -98,7 +97,8 @@ func main() {
 	}
 
 	log.Printf("Server starting on port %s", port)
-	log.Fatal(http.ListenAndServe(":"+port, r))
+	// Bind to 0.0.0.0 to allow external devices (Android phone/emulator) to connect
+	log.Fatal(http.ListenAndServe("0.0.0.0:"+port, r)) // ✅ UPDATED for external access when testing with Android
 }
 
 func initDB(pool *pgxpool.Pool) error {

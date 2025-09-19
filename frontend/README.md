@@ -15,3 +15,14 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 1
+
+
+setup environment and test android on linux
+
+Option #1 (machine ip address)
+How to find your machine's ip address
+$ ifconfig | grep "inet " | grep -v 127.0.0.1 
+you will see inet 192.168.1.223
+
+Option #2 (main.dart code)
+static const String baseUrl = 'http://10.0.2.2:8080/api';
