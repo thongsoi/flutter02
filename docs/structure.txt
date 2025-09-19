@@ -17,6 +17,8 @@ task-management-app (flutter02 on biomassx2/claude.ai)
     ├── .gitignore
     └── README.md
 
+How to test on ios
+
 cd backend
 go run main.go
 
