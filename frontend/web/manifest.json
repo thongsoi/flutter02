@@ -1,6 +1,6 @@
 {
-    "name": "task_app",
-    "short_name": "task_app",
+    "name": "frontend",
+    "short_name": "frontend",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

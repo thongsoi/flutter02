@@ -1,4 +1,4 @@
-task-management-app/
+task-management-app (flutter02 on biomassx2/claude.ai)
 ├── backend/
 │   ├── main.go
 │   ├── go.mod
@@ -12,7 +12,14 @@ task-management-app/
     ├── ios/
     ├── lib/
     │   └── main.dart
-    ├── pubspec.yaml
+    ├── pubspec.yaml 
     ├── pubspec.lock (generated after flutter pub get)
     ├── .gitignore
     └── README.md
+
+
+
+How to setup frontend
+$ cd frontend
+$ flutter create .
+# Replace pubspec.yaml and lib/main.dart with provided code
