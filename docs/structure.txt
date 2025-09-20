@@ -33,6 +33,8 @@ $ go run main.go
 
 Terminal 2
 $ cd frontend
+$ flutter pub get
+$ flutter pub upgrade
 $ flutter run
 
 How to stop
