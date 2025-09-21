@@ -23,6 +23,6 @@ cd backend
 go run main.go
 
 cd frontend
-$ flutter pub upgrade
+$ flutter pub upgrade --major-versions
 % open - a simulator
 % flutter run
