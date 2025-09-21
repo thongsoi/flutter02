@@ -1,23 +1,36 @@
 name: task_app
 description: A simple task management app with Go backend
-
-publish_to: 'none'
+publish_to: 'none' # Remove this line if you plan to publish to pub.dev later
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: '>=3.3.0 <4.0.0' # Updated to match Flutter 3.22+ recommended SDK
 
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.1.0
-  cupertino_icons: ^1.0.2
+  http: ^1.2.1          # Latest stable as of 2025
+  cupertino_icons: ^1.0.8 # Latest version
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^6.0.0
+  flutter_lints: ^4.0.0   # Updated lints package
+
+# Optional: Uncomment and configure if you want to auto-generate launcher icons
+# flutter_launcher_icons:
+#   dev_dependencies:
+#     flutter_launcher_icons: ^0.13.1
+#   flutter_launcher_icons:
+#     android: true
+#     ios: true
+#     image_path: "assets/icon/icon.png"
 
 flutter:
   uses-material-design: true
+
+  # Example of adding assets later (uncomment when needed)
+  # assets:
+  #   - assets/images/
+  #   - assets/data/
