@@ -35,7 +35,8 @@ Terminal 2
 $ cd frontend
 $ flutter pub get
 $ flutter pub upgrade --major-versions
-$ flutter run
+$ flutter run 
+choose device at vscode bottom navigator bar 
 
 How to stop
 Terminal 1 = Ctl C
